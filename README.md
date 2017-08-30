@@ -1,1 +1,3 @@
-Harap baca WAJIB_DIBACA terlebih dahulu sebelum memulai
+install python3 dan pipnya
+pip install telepot
+ganti token dalam script tersebut yang terletak dibagian bawah
