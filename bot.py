@@ -40,12 +40,12 @@ def handle(msg):
 		else:
             		risp=subprocess.check_output(text, shell=True)
 			if risp == "":
-				bot.sendMessage(adrama, 'Operasi telah dijalankan')
+				bot.sendMessage(user, 'Operasi telah dijalankan')
 			else:	
-				bot.sendMessage(adrama, risp)
-bot = telepot.Bot('391383020:AAHFLVnwpTYzMmQZs-3HUTBROFrOUdbiTPk')
+				bot.sendMessage(user, risp)
+bot = telepot.Bot('token')
 MessageLoop(bot, handle).run_as_thread()
 print 'Listening...'
-bot.sendMessage(adrama,'Bot sudah dijalankan')
+bot.sendMessage(user,'Bot sudah dijalankan')
 while 1:
     time.sleep(10)
