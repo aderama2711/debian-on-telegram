@@ -5,7 +5,7 @@ import datetime
 import telepot
 import subprocess
 from telepot.loop import MessageLoop
-user='token_msg'
+adrama='413983527'
 def handle(msg):
 	content_type, chat_type, chat_id = telepot.glance(msg)
 	print(content_type, chat_type, chat_id)
@@ -19,11 +19,11 @@ def handle(msg):
 			bot.sendMessage(chat_id, 'Time untuk menunjukkan waktu sekarang\nSayang untuk anda yang Jones :p\n\n\n\n*untuk penambahan fitur silahkan hubungi admin(ade.ramadha@gmail.com)*')
 		elif text == 'cd':
 			risp=subprocess.check_output("cd", shell=True)
-			bot.sendMessage(user, 'Direktori root')
+			bot.sendMessage(adrama, 'Direktori root')
 		elif text == 'home':
 			risp=subprocess.check_output("su telegram", shell=True)
 			risp=subprocess.check_output("cd ~", shell=True)
-			bot.sendMessage(user, 'Direktori home user default(Telegram)')
+			bot.sendMessage(adrama, 'Direktori home user default(Telegram)')
 		elif text == 'Time':
 			bot.sendMessage(chat_id, str(datetime.datetime.now()))
 		elif text == 'Sayang':
@@ -40,12 +40,12 @@ def handle(msg):
 		else:
             		risp=subprocess.check_output(text, shell=True)
 			if risp == "":
-				bot.sendMessage(user, 'Operasi telah dijalankan')
+				bot.sendMessage(adrama, 'Operasi telah dijalankan')
 			else:	
-				bot.sendMessage(user, risp)
-bot = telepot.Bot('token')
+				bot.sendMessage(adrama, risp)
+bot = telepot.Bot('391383020:AAHFLVnwpTYzMmQZs-3HUTBROFrOUdbiTPk')
 MessageLoop(bot, handle).run_as_thread()
 print 'Listening...'
-bot.sendMessage(user,'Bot sudah dijalankan')
+bot.sendMessage(adrama,'Bot sudah dijalankan')
 while 1:
     time.sleep(10)
